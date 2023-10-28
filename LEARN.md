@@ -13,4 +13,6 @@
    - com.chrisreylo.emp_management.repository
    - com.chrisreylo.emp_management.exception
 
-- Created class Employee under model
+- Created class Employee under model package
+- Created interface EmployeeRepository that extends JpaRepository under repository package. 
+- Create ResourceNotFoundException under exceptions package.
