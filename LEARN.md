@@ -12,3 +12,5 @@
    - com.chrisreylo.emp_management.controller
    - com.chrisreylo.emp_management.repository
    - com.chrisreylo.emp_management.exception
+
+- Created class Employee under model
