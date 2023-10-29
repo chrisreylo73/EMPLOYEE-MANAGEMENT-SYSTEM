@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import EmployeeService from 'C:/Users/chris/Desktop/EMPLOYEE MANAGEMENT/react-frontend/src/services/EmplyeeService'; // Import the EmployeeService
+import axios from "axios";
+// const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/v1/employees"
+
+function getEmployees() {
+  return axios.get("http://localhost:8080/api/v1/employees");
+}
+
 const ListEmployeesComponent = ({}) => {
   const [employees, setEmployees] = useState([]); // State to store employee data
-
   useEffect(() => {
     // Fetch employees data when the component mounts
-    EmployeeService.getEmployees()
+    getEmployees()
       .then((response) => {
         setEmployees(response.data); // Update the state with the employee data
       })
@@ -20,7 +25,8 @@ const ListEmployeesComponent = ({}) => {
       <div className="row">
         {employees.map((employee) => (
           <div key={employee.id}>
-            <p>Name: {employee.firstName}</p>
+            <p>Name: {employee.firstName} {employee.secondName}</p>
+            <p>Email: {employee.emailId}</p>
           </div>
         ))}
       </div>
