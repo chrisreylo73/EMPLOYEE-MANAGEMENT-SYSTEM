@@ -74,15 +74,12 @@ function AddEmployeeForm() {
           />
         </div>
         <div className="text-center">
-            
             <button
             type="submit"
             className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
           >
             Submit
             </button>
-
-  
         </div>
       </form>
     </div>
