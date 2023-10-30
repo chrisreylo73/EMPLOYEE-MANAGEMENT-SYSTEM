@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import { Link } from 'react-router-dom';
 // const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/v1/employees"
 
 function getEmployees() {
@@ -23,15 +24,17 @@ const ListEmployeesComponent = ({}) => {
     <div className="w-screen max-w-screen-xl mx-auto p-4 mb">
       <div className="flex justify-between">
         <h2 className="text-3xl text-gold mb-10 font-semibold">EMPLOYEES LIST</h2>
+        <Link to="/add_employee">
         <button className="w-40 h-10 text-sm font-semibold bg-green-400 text-white rounded-full hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-300">
           ADD EMPLOYEE
         </button>
+      </Link>
       </div>
-      <div className=" overflow-y-auto mb-10"> {/* Add max-height and overflow-y-auto */}
+      <div className=" overflow-y-auto mb-20"> {/* Add max-height and overflow-y-auto */}
         <table className="w-full table-fixed inset-box-shadow-xl inset-box-shadow-black">
           <thead>
-            <tr>
-              <th className="">Name</th>
+            <tr className="shadow-black shadow-md">
+              <th className=" p-3">Name</th>
               <th className="">Email</th>
               <th>Actions</th>
             </tr>
