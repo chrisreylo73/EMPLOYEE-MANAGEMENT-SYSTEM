@@ -1,6 +1,6 @@
 const Footer = () => {
    return (
-     <footer className="bg-6 text-white p-4 fixed bottom-0 w-screen">
+     <footer className="bg-6 text-white p-4 fixed bottom-0 w-screen mt-5">
          <p className="text-sm">© {new Date().getFullYear()} Employee Management System</p>
      </footer>
    );

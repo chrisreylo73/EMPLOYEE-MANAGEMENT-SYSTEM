@@ -20,7 +20,7 @@ public class Employee {
    @Column(name="first_name")
    private String firstName;
    @Column(name="last_name")
-   private String secondName; // Should be "lastName"?
+   private String lastName; // Should be "lastName"?
    @Column(name="email_id")
    private String emailId;
 
@@ -29,10 +29,10 @@ public class Employee {
    }
 
    // Constructor with parameters for all attributes
-   public Employee(int id, String firstName, String secondName, String emailId) {
+   public Employee(int id, String firstName, String lastName, String emailId) {
       this.id = id;
       this.firstName = firstName;
-      this.secondName = secondName;
+      this.lastName = lastName;
       this.emailId = emailId;
    }
 
@@ -54,12 +54,12 @@ public class Employee {
       this.firstName = firstName;
    }
 
-   public String getSecondName() {
-      return this.secondName;
+   public String getLastName() {
+      return this.lastName;
    }
 
-   public void setSecondName(String secondName) {
-      this.secondName = secondName;
+   public void setLastName(String lastName) {
+      this.lastName = lastName;
    }
 
    public String getEmailId() {

@@ -41,7 +41,7 @@ const ListEmployeesComponent = ({}) => {
               index % 2 === 0 ? 'bg-4' : 'bg-3' // Apply different shades to even and odd rows
             }`}>
               <td className=" shadow-neutral-950 text-gold mr-5 p-2">
-                {employee.firstName} {employee.secondName}
+                {employee.firstName} {employee.lastName}
               </td>
               <td className=" text-gold m-5">{employee.emailId}</td>
               <td className="flex justify-center">
