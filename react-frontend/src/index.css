@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Width of the scrollbar track (background) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Color of the scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Color of the scrollbar thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* On hover, the thumb will be a darker color */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
