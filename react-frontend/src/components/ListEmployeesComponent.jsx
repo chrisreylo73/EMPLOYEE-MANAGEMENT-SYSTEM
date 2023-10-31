@@ -40,6 +40,22 @@ const ListEmployeesComponent = ({}) => {
         console.error('Error deleting employee:', error);
       });
   };
+
+  // const handleUpdate = (employeeId) => {
+  //   // Fetch the employee data for the selected employee
+  //   axios.get(`http://localhost:8080/api/v1/employees/${employeeId}`)
+  //     .then((response) => {
+  //       const employeeData = response.data;
+
+  //       // Redirect to the update page with employee data
+  //       history.push(`/update_employee/${employeeId}`, { employeeData });
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error fetching employee data:', error);
+  //     });
+  // };
+
+
   return (
     <div className="w-screen max-w-screen-xl mx-auto p-4 mb">
       <div className="flex justify-between">
@@ -69,9 +85,11 @@ const ListEmployeesComponent = ({}) => {
                 </td>
                 <td className=" text-gold m-5">{employee.emailId}</td>
                 <td className="flex justify-center">
-                  <button className="w-20 h-8 px-3 mt-3 text-sm font-semibold text-white bg-blue-600 rounded-md hover-bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 m-2 ml-2">
+                <Link to={`/update_employee/${employee.id}`}>
+                  <button className="w-20 h-8 px-3 mt-3 text-sm font-semibold text-white bg-blue-600 rounded-md hover-bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 m-2 ml-2" >
                     UPDATE
-                  </button>
+                   </button>
+                </Link>
                   <button className="w-20 h-8 px-3 mt-3 text-sm font-semibold text-white bg-red-500 rounded-md hover-bg-red-600 focus:outline-none focus:ring focus:ring-red-300 m-2" onClick={() => handleDelete(employee.id)}>
                     DELETE
                   </button>
